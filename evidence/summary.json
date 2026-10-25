@@ -1,0 +1,79 @@
+[
+  {
+    "scenario": "healthy",
+    "verdict": "PASS",
+    "expected_files": 8,
+    "verified": 8,
+    "missing": 0,
+    "modified": 0,
+    "unexpected_files": [],
+    "file_completeness_pct": 100.0,
+    "verified_bytes": 4335,
+    "expected_bytes": 4335,
+    "byte_completeness_pct": 100.0,
+    "restore_seconds": 0.000877,
+    "total_seconds": 0.001754
+  },
+  {
+    "scenario": "missing",
+    "verdict": "FAIL",
+    "expected_files": 8,
+    "verified": 7,
+    "missing": 1,
+    "modified": 0,
+    "unexpected_files": [],
+    "file_completeness_pct": 87.5,
+    "verified_bytes": 4296,
+    "expected_bytes": 4335,
+    "byte_completeness_pct": 99.1,
+    "restore_seconds": 0.000639,
+    "total_seconds": 0.001228
+  },
+  {
+    "scenario": "modified",
+    "verdict": "FAIL",
+    "expected_files": 8,
+    "verified": 7,
+    "missing": 0,
+    "modified": 1,
+    "unexpected_files": [],
+    "file_completeness_pct": 87.5,
+    "verified_bytes": 4301,
+    "expected_bytes": 4335,
+    "byte_completeness_pct": 99.22,
+    "restore_seconds": 0.000506,
+    "total_seconds": 0.001022
+  },
+  {
+    "scenario": "mixed",
+    "verdict": "FAIL",
+    "expected_files": 8,
+    "verified": 6,
+    "missing": 1,
+    "modified": 1,
+    "unexpected_files": [],
+    "file_completeness_pct": 75.0,
+    "verified_bytes": 4262,
+    "expected_bytes": 4335,
+    "byte_completeness_pct": 98.32,
+    "restore_seconds": 0.000674,
+    "total_seconds": 0.001084
+  },
+  {
+    "scenario": "unexpected",
+    "verdict": "FAIL",
+    "expected_files": 8,
+    "verified": 8,
+    "missing": 0,
+    "modified": 0,
+    "unexpected_files": [
+      "unexpected.txt"
+    ],
+    "file_completeness_pct": 100.0,
+    "verified_bytes": 4335,
+    "expected_bytes": 4335,
+    "byte_completeness_pct": 100.0,
+    "restore_seconds": 0.000574,
+    "total_seconds": 0.001098
+  }
+]

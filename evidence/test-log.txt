@@ -1,0 +1,22 @@
+test_absolute (test_restoreproof.RecoveryTests.test_absolute) ... ok
+test_backslash (test_restoreproof.RecoveryTests.test_backslash) ... ok
+test_duplicate_manifest (test_restoreproof.RecoveryTests.test_duplicate_manifest) ... ok
+test_empty_file_verified (test_restoreproof.RecoveryTests.test_empty_file_verified) ... ok
+test_empty_manifest (test_restoreproof.RecoveryTests.test_empty_manifest) ... ok
+test_healthy (test_restoreproof.RecoveryTests.test_healthy) ... ok
+test_invalid_manifest (test_restoreproof.RecoveryTests.test_invalid_manifest) ... ok
+test_invalid_zip (test_restoreproof.RecoveryTests.test_invalid_zip) ... ok
+test_missing (test_restoreproof.RecoveryTests.test_missing) ... ok
+test_mixed (test_restoreproof.RecoveryTests.test_mixed) ... ok
+test_same_length_corruption (test_restoreproof.RecoveryTests.test_same_length_corruption) ... ok
+test_size_limit (test_restoreproof.RecoveryTests.test_size_limit) ... ok
+test_source_symlink (test_restoreproof.RecoveryTests.test_source_symlink) ... ok
+test_symlink (test_restoreproof.RecoveryTests.test_symlink) ... ok
+test_traversal (test_restoreproof.RecoveryTests.test_traversal) ... ok
+test_unexpected (test_restoreproof.RecoveryTests.test_unexpected) ... ok
+test_unicode (test_restoreproof.RecoveryTests.test_unicode) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.036s
+
+OK

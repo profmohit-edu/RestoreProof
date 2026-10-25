@@ -1,0 +1,11 @@
+Suggested narration for a 90-second presentation
+
+I am Mohit Tiwari. RestoreProof is a local file-recovery verification prototype. Its question is simple: can this backup reproduce the files we expected?
+
+The reference manifest records paths, sizes and SHA-256 hashes. It must be created before an incident and protected independently. RestoreProof extracts the ZIP into a fresh temporary directory, reads the restored bytes, compares them with that manifest, and removes the temporary files afterwards.
+
+Here is the healthy synthetic backup. All eight files verify. Now I select a missing-file scenario. Attendance is absent and the check fails. A same-length edit of the results file also fails because the content hash changes. The mixed scenario identifies both faults. An unexpected extra file causes FAIL even if every expected file matches.
+
+The report exports as JSON so the evidence can be inspected. You can also select your own manifest and ZIP locally. No cloud service or API key is required.
+
+This is not malware detection or application recovery certification. Existing products such as Veeam and restic already support recovery verification. This prototype focuses on an accessible dependency-free implementation, controlled demonstrations and clear per-file evidence. The source and tests are included, and AI-assisted development is disclosed.

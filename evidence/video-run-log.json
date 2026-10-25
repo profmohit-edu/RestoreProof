@@ -1,0 +1,404 @@
+[
+  {
+    "scenario": "healthy",
+    "command": "python3 restoreproof.py verify evidence/healthy-manifest.json evidence/healthy.zip --output report.json",
+    "stdout": "PASS 100.0 %",
+    "exit_code": 0,
+    "report": {
+      "schema": "restoreproof-report-v1",
+      "scope": "File-level bytes and paths only; no malware or application recovery assessment.",
+      "verdict": "PASS",
+      "expected_files": 8,
+      "verified": 8,
+      "missing": 0,
+      "modified": 0,
+      "unexpected_files": [],
+      "file_completeness_pct": 100.0,
+      "verified_bytes": 4335,
+      "expected_bytes": 4335,
+      "byte_completeness_pct": 100.0,
+      "restore_seconds": 0.001759,
+      "total_seconds": 0.003227,
+      "files": [
+        {
+          "path": "college/attendance.csv",
+          "size": 39,
+          "sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "actual_sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "college/results.csv",
+          "size": 34,
+          "sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "actual_sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "empty.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "finance/budget.json",
+          "size": 34,
+          "sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "actual_sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "policy/recovery.txt",
+          "size": 56,
+          "sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "actual_sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/experiment.txt",
+          "size": 54,
+          "sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "actual_sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/sample.bin",
+          "size": 4096,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "actual_sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "unicode/caf\u00e9.txt",
+          "size": 22,
+          "sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "actual_sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "status": "VERIFIED"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "missing",
+    "command": "python3 restoreproof.py verify evidence/missing-manifest.json evidence/missing.zip --output report.json",
+    "stdout": "FAIL 87.5 %",
+    "exit_code": 2,
+    "report": {
+      "schema": "restoreproof-report-v1",
+      "scope": "File-level bytes and paths only; no malware or application recovery assessment.",
+      "verdict": "FAIL",
+      "expected_files": 8,
+      "verified": 7,
+      "missing": 1,
+      "modified": 0,
+      "unexpected_files": [],
+      "file_completeness_pct": 87.5,
+      "verified_bytes": 4296,
+      "expected_bytes": 4335,
+      "byte_completeness_pct": 99.1,
+      "restore_seconds": 0.002837,
+      "total_seconds": 0.003687,
+      "files": [
+        {
+          "path": "college/attendance.csv",
+          "size": 39,
+          "sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "actual_sha256": null,
+          "status": "MISSING"
+        },
+        {
+          "path": "college/results.csv",
+          "size": 34,
+          "sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "actual_sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "empty.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "finance/budget.json",
+          "size": 34,
+          "sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "actual_sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "policy/recovery.txt",
+          "size": 56,
+          "sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "actual_sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/experiment.txt",
+          "size": 54,
+          "sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "actual_sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/sample.bin",
+          "size": 4096,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "actual_sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "unicode/caf\u00e9.txt",
+          "size": 22,
+          "sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "actual_sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "status": "VERIFIED"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "modified",
+    "command": "python3 restoreproof.py verify evidence/modified-manifest.json evidence/modified.zip --output report.json",
+    "stdout": "FAIL 87.5 %",
+    "exit_code": 2,
+    "report": {
+      "schema": "restoreproof-report-v1",
+      "scope": "File-level bytes and paths only; no malware or application recovery assessment.",
+      "verdict": "FAIL",
+      "expected_files": 8,
+      "verified": 7,
+      "missing": 0,
+      "modified": 1,
+      "unexpected_files": [],
+      "file_completeness_pct": 87.5,
+      "verified_bytes": 4301,
+      "expected_bytes": 4335,
+      "byte_completeness_pct": 99.22,
+      "restore_seconds": 0.001779,
+      "total_seconds": 0.0025,
+      "files": [
+        {
+          "path": "college/attendance.csv",
+          "size": 39,
+          "sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "actual_sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "college/results.csv",
+          "size": 34,
+          "sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "actual_sha256": "915e193145a8f01ea341b061de3669b26839db813a3e952de45d393d9ebefae1",
+          "status": "MODIFIED"
+        },
+        {
+          "path": "empty.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "finance/budget.json",
+          "size": 34,
+          "sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "actual_sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "policy/recovery.txt",
+          "size": 56,
+          "sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "actual_sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/experiment.txt",
+          "size": 54,
+          "sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "actual_sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/sample.bin",
+          "size": 4096,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "actual_sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "unicode/caf\u00e9.txt",
+          "size": 22,
+          "sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "actual_sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "status": "VERIFIED"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "mixed",
+    "command": "python3 restoreproof.py verify evidence/mixed-manifest.json evidence/mixed.zip --output report.json",
+    "stdout": "FAIL 75.0 %",
+    "exit_code": 2,
+    "report": {
+      "schema": "restoreproof-report-v1",
+      "scope": "File-level bytes and paths only; no malware or application recovery assessment.",
+      "verdict": "FAIL",
+      "expected_files": 8,
+      "verified": 6,
+      "missing": 1,
+      "modified": 1,
+      "unexpected_files": [],
+      "file_completeness_pct": 75.0,
+      "verified_bytes": 4262,
+      "expected_bytes": 4335,
+      "byte_completeness_pct": 98.32,
+      "restore_seconds": 0.001626,
+      "total_seconds": 0.002375,
+      "files": [
+        {
+          "path": "college/attendance.csv",
+          "size": 39,
+          "sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "actual_sha256": null,
+          "status": "MISSING"
+        },
+        {
+          "path": "college/results.csv",
+          "size": 34,
+          "sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "actual_sha256": "915e193145a8f01ea341b061de3669b26839db813a3e952de45d393d9ebefae1",
+          "status": "MODIFIED"
+        },
+        {
+          "path": "empty.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "finance/budget.json",
+          "size": 34,
+          "sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "actual_sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "policy/recovery.txt",
+          "size": 56,
+          "sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "actual_sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/experiment.txt",
+          "size": 54,
+          "sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "actual_sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/sample.bin",
+          "size": 4096,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "actual_sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "unicode/caf\u00e9.txt",
+          "size": 22,
+          "sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "actual_sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "status": "VERIFIED"
+        }
+      ]
+    }
+  },
+  {
+    "scenario": "unexpected",
+    "command": "python3 restoreproof.py verify evidence/unexpected-manifest.json evidence/unexpected.zip --output report.json",
+    "stdout": "FAIL 100.0 %",
+    "exit_code": 2,
+    "report": {
+      "schema": "restoreproof-report-v1",
+      "scope": "File-level bytes and paths only; no malware or application recovery assessment.",
+      "verdict": "FAIL",
+      "expected_files": 8,
+      "verified": 8,
+      "missing": 0,
+      "modified": 0,
+      "unexpected_files": [
+        "unexpected.txt"
+      ],
+      "file_completeness_pct": 100.0,
+      "verified_bytes": 4335,
+      "expected_bytes": 4335,
+      "byte_completeness_pct": 100.0,
+      "restore_seconds": 0.002449,
+      "total_seconds": 0.003237,
+      "files": [
+        {
+          "path": "college/attendance.csv",
+          "size": 39,
+          "sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "actual_sha256": "95212e96dbbef444d396f3dfa211245d2048f5f7a4cd0999abab5a1c001e6a01",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "college/results.csv",
+          "size": 34,
+          "sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "actual_sha256": "2d9afc01446e9ccf3b0be69082b522165ed49c066ec2d6f19b8c79c95acc1a95",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "empty.txt",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "finance/budget.json",
+          "size": 34,
+          "sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "actual_sha256": "a3d116ecc9a4812d588997210f6a3e553c139e90f1cd0c01aa0f952612270ced",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "policy/recovery.txt",
+          "size": 56,
+          "sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "actual_sha256": "fedbec21c50b7b4eb70488a444fd807f3482c8f53693b28159cc5f5eb2c07f44",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/experiment.txt",
+          "size": 54,
+          "sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "actual_sha256": "e5d10e7027736f884f88e64b949150bf35b380b837d9b6e6b130d2213ed9db6c",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "research/sample.bin",
+          "size": 4096,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "actual_sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "status": "VERIFIED"
+        },
+        {
+          "path": "unicode/caf\u00e9.txt",
+          "size": 22,
+          "sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "actual_sha256": "bde1261f9d28b6e6e04da4ae68b8a65ef6daf522da28316056dd0f24f612b9ef",
+          "status": "VERIFIED"
+        }
+      ]
+    }
+  }
+]

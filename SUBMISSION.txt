@@ -1,0 +1,24 @@
+PROJECT TITLE
+RestoreProof: Backup Recovery Verification for Ransomware Readiness
+
+TRACK
+Cybersecurity
+
+PROBLEM STATEMENT
+A completed backup does not establish that every expected file can be recovered correctly. Small institutions and businesses need an accessible way to detect missing, modified or unexpected files before an incident makes restoration urgent. RestoreProof addresses file-level recovery checks using an independently protected reference manifest and explicit evidence of restored byte integrity.
+
+PROPOSED SOLUTION
+RestoreProof is a working local-first Python prototype with a browser dashboard and command-line interface. It extracts a ZIP archive into a fresh temporary directory, rehashes restored files with SHA-256, and compares their paths, sizes and hashes against a supplied trusted manifest. The dashboard reports verified, missing, modified and unexpected files, file completeness and measured extraction-plus-verification time, and exports a JSON report. Five controlled scenarios use eight synthetic files: healthy, missing, same-length modification, mixed damage and unexpected content. Automated tests cover correct outcomes, Unicode and empty files, malformed inputs, path traversal, symlinks and size limits. No API keys or third-party Python packages are required. Existing recovery-verification products are acknowledged; no claim of first-of-its-kind novelty or superiority is made. The prototype checks file bytes, not malware absence or application-level recovery. AI-assisted development is disclosed in the repository documentation.
+
+GITHUB REPOSITORY
+https://github.com/profmohit-edu/RestoreProof
+
+WORKING DEMO / DEPLOYMENT LINK
+Optional. Leave blank if no publicly hosted demo exists. The localhost address is not accessible to judges. Judges can run the source using README instructions.
+
+PROJECT DEMO VIDEO
+https://github.com/profmohit-edu/RestoreProof/blob/main/demo/RestoreProof_Demo.mp4
+Silent captioned demonstration of actual command-line runs; use View raw/download if playback is unavailable.
+
+DECLARATION
+Review the code, README, test evidence, third-party acknowledgements and AI disclosure before checking the declaration. Do not describe synthetic tests as field deployment or user validation.
