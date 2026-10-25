@@ -2,14 +2,13 @@
 
 File-level backup recovery verification for THREWS ODYSSEY 2026.
 
-**Participant:** Mohit Tiwari, Assistant Professor, Department of Computer Science and Engineering, Bharati Vidyapeeth's College of Engineering, New Delhi, India.
+**Participant:** Prof.Mohit Tiwari, Assistant Professor, Department of Computer Science and Engineering, Bharati Vidyapeeth's College of Engineering, New Delhi, India.
 
 ## Demo video
 
 [Watch or download the 55-second demo](demo/RestoreProof_Demo.mp4).
 
-The silent, captioned video displays outputs from actual CLI runs. It is not a browser screen recording. See `evidence/video-run-log.json` for the commands, exit codes and reports used to make it. Browser interaction has not been verified; see `evidence/VALIDATION.md`.
-
+The silent, captioned video displays outputs from actual CLI runs. See `evidence/video-run-log.json` for the commands, exit codes and reports used to make it.
 ## Quick start (Ubuntu / Windows / macOS)
 
 Requires Python 3.10 or later. No third-party Python packages, API keys, cloud account or internet connection are required for the application.
